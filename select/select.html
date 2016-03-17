@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="style/selectUI.css" />
+
+	<body>
+		<select class="selectUI selectUI1">
+			<option value="1">我是下拉框1</option>
+			<option value="2">我是下拉框2</option>
+			<option value="3">我是下拉框3</option>
+			<option value="4" selected="selected">我是下拉框4</option>
+			<option value="5">我是下拉框5</option>
+			<option value="6">我是下拉框6</option>
+			<option value="7">我是下拉框7</option>
+			<option value="8">我是下拉框8</option>
+		</select>
+		<pre>
+			selectUI.select($(".selectUI1"),{
+			selectClass: "mySel",
+			timer:100,
+			isScroll:false,
+			maxHeight:225,
+			callBack : function(){
+				alert("当前选中值为"+$(".selectUI1").val());
+			}
+			
+		});
+		</pre>
+		<select class="selectUI selectUI2">
+			<option value="1">我是下拉框1</option>
+			<option value="2">我是下拉框2</option>
+			<option value="3">我是下拉框3</option>
+			<option value="4" selected="selected">我是下拉框4</option>
+			<option value="5">我是下拉框5</option>
+			<option value="6">我是下拉框6</option>
+			<option value="7">我是下拉框7</option>
+			<option value="8">我是下拉框8</option>
+		</select>
+		<select class="selectUI selectUI3">
+			<option value="1">我是下拉框1</option>
+			<option value="2">我是下拉框2</option>
+			<option value="3">我是下拉框3</option>
+			<option value="4" selected="selected">我是下拉框4</option>
+			<option value="5">我是下拉框5</option>
+			<option value="6">我是下拉框6</option>
+			<option value="7">我是下拉框7</option>
+			<option value="8">我是下拉框8</option>
+		</select>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+	<script type="text/javascript" src="js/selectUI.js" ></script>
+	<script>
+		selectUI.select($(".selectUI1"),{
+			selectClass: "mySel",
+			timer:100,
+			isScroll:false,
+			maxHeight:225,
+			callBack : function(){
+				alert("当前选中值为"+$(".selectUI1").val());
+			}
+			
+		});
+		selectUI.select($(".selectUI2"));
+		
+		selectUI.select($(".selectUI3"),{
+			timer:100,
+			maxHeight:235,
+			isScroll:true,
+			callBack: function(){
+				alert("当前选中值为"+$(".selectUI3").val());
+			}
+		});
+	</script>
+
+</html>
