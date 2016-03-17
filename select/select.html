@@ -18,19 +18,7 @@
 			<option value="7">我是下拉框7</option>
 			<option value="8">我是下拉框8</option>
 		</select>
-		<pre>
-			selectUI.select($(".selectUI1"),{
-			selectClass: "mySel",
-			timer:100,
-			isScroll:false,
-			maxHeight:225,
-			callBack : function(){
-				alert("当前选中值为"+$(".selectUI1").val());
-			}
-			
-		});
-		</pre>
-		<select class="selectUI selectUI2">
+		<select class="selectUI selectUI2" disabled="disabled">
 			<option value="1">我是下拉框1</option>
 			<option value="2">我是下拉框2</option>
 			<option value="3">我是下拉框3</option>
@@ -50,10 +38,12 @@
 			<option value="7">我是下拉框7</option>
 			<option value="8">我是下拉框8</option>
 		</select>
+		<div></div>
 	</body>
 	<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
 	<script type="text/javascript" src="js/selectUI.js" ></script>
 	<script>
+	
 		selectUI.select($(".selectUI1"),{
 			selectClass: "mySel",
 			timer:100,
@@ -74,6 +64,6 @@
 				alert("当前选中值为"+$(".selectUI3").val());
 			}
 		});
-	</script>
+		</script>
 
 </html>

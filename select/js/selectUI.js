@@ -15,8 +15,8 @@ var selectUI = selectUI || {};
 		var selectDown = selectWrap.find(".selectDown");
 		var ico = selectWrap.find(".select-ico")
 		var options = $.extend(myConfig, opts);
+		
 		init();
-
 		function init() {
 			selectTitle.css({
 				"display": "block",
@@ -46,6 +46,10 @@ var selectUI = selectUI || {};
 			if (options.selectClass && typeof(options.selectClass) === "string") {
 				selectWrap.addClass(options.selectClass);
 			}
+		}
+		if(obj.attr("disabled")){
+			selectTitle.css("cursor","not-allowed");
+			return false;
 		}
 		function up() {
 			selectDown.stop().slideUp(options.timer);
