@@ -1,2 +1,2 @@
 # demos
-我的各种dome
+我的各种demo
