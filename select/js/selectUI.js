@@ -40,7 +40,7 @@ var selectUI = selectUI || {};
 			if (options.maxHeight) {
 				selectDown.css("max-height", options.maxHeight);
 			}
-			if (options.isScroll && options.maxHeight) {
+			if (!options.isScroll && options.maxHeight) {
 				scrollUnique()
 			}
 			if (options.selectClass && typeof(options.selectClass) === "string") {
