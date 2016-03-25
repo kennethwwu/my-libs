@@ -1,2 +1,2 @@
 ## 使用方法
-[在线demo](http://www.zhouyupeng.me/demo/select/select.html)
+[在线demo](http://zhouyp.applinzi.com/demo/select/select.html)
