@@ -46,7 +46,7 @@
 			selectClass: "mySel",
 			timer:400,//下拉时间,默认400ms
 			isScroll:false,//鼠标在下拉框中时页面不滚动
-			maxHeight:225,
+			maxHeight:225,//下拉框的最大高度为225px
 			callBack : function(value){
 				alert("当前选中值为"+ value);
 			}
@@ -86,7 +86,7 @@
 		<pre style="font-size: 16px;">
 			selectUI.select($(".selectUI3"),{
 				timer:100,下拉时间100ms
-				maxHeight:235,//下拉框的最大高度为235px
+				maxHeight:0,
 				isScroll:true,//鼠标在下拉框中时页面滚动
 				callBack: function(value){
 					alert("当前选中值为"+ value);
