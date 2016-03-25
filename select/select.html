@@ -47,8 +47,8 @@
 			timer:400,//下拉时间,默认400ms
 			isScroll:false,//鼠标在下拉框中时页面不滚动
 			maxHeight:225,
-			callBack : function(){
-				alert("当前选中值为"+$(".selectUI1").val());
+			callBack : function(value){
+				alert("当前选中值为"+ value);
 			}
 			
 		});
@@ -88,8 +88,8 @@
 				timer:100,下拉时间100ms
 				maxHeight:235,//下拉框的最大高度为235px
 				isScroll:true,//鼠标在下拉框中时页面滚动
-				callBack: function(){
-					alert("当前选中值为"+$(".selectUI3").val());
+				callBack: function(value){
+					alert("当前选中值为"+ value);
 				}
 			});
 		</pre>
@@ -101,15 +101,15 @@
 					timer:200,//下拉时间,默认200ms
 					isScroll:false,//鼠标在下拉框中时页面是否滚动,默认不滚动
 					maxHeight:225,//设置下拉框的最大高度，默认0不设置
-					callBack : function(){//下拉框点击后的回调事件
-						alert("当前选中值为"+$(".selectUI1").val());
+					callBack : function(value){//下拉框点击后的回调事件,value回调函数的返回参数，为当前select选中的值 
+						alert("当前选中值为"+ value);
 					}
 					
 				});
 				<p>
 				<h1>使用方法</h1>
 				导入selectUI.css和导入selectUI.js(依赖jquery),在原始select上加class "selectUI"
-				.调用selectUI.init();或
+				.调用selectUI.init();init()中可添加参数,或
 				.在select上添加另外class,selectUI.select($(".selectUI1"),{
 					//这里是参数
 				})
@@ -149,8 +149,8 @@
 			timer:400,
 			isScroll:false,
 			maxHeight:225,
-			callBack : function(){
-				alert("当前选中值为"+$(".selectUI1").val());
+			callBack : function(value){
+				alert("当前选中值为"+value);
 			}
 			
 		});
@@ -160,8 +160,8 @@
 			timer:100,
 			maxHeight:0,
 			isScroll:true,
-			callBack: function(){
-				alert("当前选中值为"+$(".selectUI3").val());
+			callBack: function(value){
+				alert("当前选中值为"+value);
 			}
 		});
 		</script>

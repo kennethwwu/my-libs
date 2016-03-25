@@ -1,5 +1,5 @@
-var selectUI = selectUI || {};
-(function(exports) {
+;(function($,window,undefined) {
+	var selectUI = selectUI || {};
 	function decoration(obj, opts) {
 		var myConfig = {
 			selectClass: "", //添加自定义样式
@@ -71,7 +71,7 @@ var selectUI = selectUI || {};
 			obj.find("option").attr("selected", false).eq($(this).index()).attr("selected", true)
 			selectTitle.find("em").html($(this).html());
 			if (options.callBack && typeof(options.callBack) === "function") {
-				options.callBack();
+				options.callBack($(this).val());
 			}
 		});
 
@@ -121,8 +121,9 @@ var selectUI = selectUI || {};
 		})
 
 	}
-	exports.select = select;
-	exports.init = function() {
-		$('select') && exports.select($("select.selectUI"));
+	selectUI.select = select;
+	selectUI.init = function(opts) {
+		$('select') && selectUI.select($("select.selectUI"),opts);
 	}
-})(selectUI)
+	window.selectUI = selectUI;
+})(jQuery,window)
