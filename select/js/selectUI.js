@@ -125,5 +125,12 @@
 	selectUI.init = function(opts) {
 		$('select') && selectUI.select($("select.selectUI"),opts);
 	}
-	window.selectUI = selectUI;
+	
+	    if (typeof module !== 'undefined' && typeof exports === 'object' && define.cmd) {
+	    	module.exports = selectUI;
+	  	} else if (typeof define === 'function' && define.amd) {
+	   		define(function() { return selectUI; });
+	  	} else {
+	    	window.selectUI = selectUI;
+	 	}
 })(jQuery,window)
