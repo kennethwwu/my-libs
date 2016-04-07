@@ -70,6 +70,7 @@
 			up();
 			obj.find("option").attr("selected", false).eq($(this).index()).attr("selected", true)
 			selectTitle.find("em").html($(this).html());
+			obj.trigger("change");
 			if (options.callBack && typeof(options.callBack) === "function") {
 				options.callBack($(this).val());
 			}
