@@ -28,6 +28,7 @@
     autoPlay: false, //自动播放时间，默认false不自动播放
     tabEvent: "click", //tab事件有click,mouseover
     now: 0, //默认第几个显示
+    animate : false,//淡入淡出,默认false
     delay: false //延迟时间,false时不延迟
 }</code></pre>
 <h2>调用</h2>
@@ -45,6 +46,7 @@
     autoPlay: false, //自动播放时间，默认false不自动播放
     tabEvent: "click", //tab事件有click,mouseover
     now: 0, //默认第几个显示
+    animate : false,//淡入淡出,默认false
     delay: false //延迟时间,false时不延迟
 });</code></pre>
 
