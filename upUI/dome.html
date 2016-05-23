@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+	#b{
+		width: 100px;
+		height: 20px;
+		background: red;
+		position: absolute;
+	}
+</style>
+<div id="b">
+	12
+</div>
+<body>
+</body>
+<script type="text/javascript">
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+var start = null;
+var d = document.getElementById('b');
+
+function step(timestamp) {
+    if (start === null) start = timestamp;
+    var progress = timestamp - start;
+    d.style.left = Math.min(progress / 2, 2000) + "px";
+    if (progress < 2000) {
+        requestAnimationFrame(step);
+    }
+}
+requestAnimationFrame(step);
+</script>
+
+</html>
