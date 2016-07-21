@@ -2,7 +2,7 @@
 <blockquote>
 <h1><strong>使用方法</strong></h1>
 </blockquote>
-####不依赖其他框架
+####不依赖其他库
 
 引入numUp.js在标签里加上num属性
 ```html
@@ -10,9 +10,9 @@
 <div num="202932323" ></div>
 <div num="22312324" ></div>
 ```
-NumUpUI(elm,otp);
+NumUpUI(elm,opt);
 
-#otp配置
+#opt配置
 ```javascript
 {
     num:100000,//可选，如果标签中有num这个值配置中的num将失效
