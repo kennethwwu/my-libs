@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>numUp</title>
+</head>
+<style type="text/css">
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.numWrap {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+.numWrapLeft{
+    margin:0 20px;
+}
+.numWrapLeft,
+.numWrapRight {
+    float: left;
+}
+</style>
+
+<body>
+    <div class="numWrap">
+        <div class="numWrapLeft">
+            <h2>原生用法</h2>
+            <div id="box">
+                <div num='232323'></div>
+                <div num="938839"></div>
+                <div num="124545090"></div>
+            </div>
+            <pre><xmp>
+        <div id="box">
+            <div num='232323'></div>
+            <div num="938839"></div>
+            <div num="124545090"></div>
+        </div></xmp>
+        var box = document.getElementById('box');
+        var Div = a.getElementsByTagName("div");
+        NumUpUI(Div, {
+            prefix: "￥",
+            decimal: 2,
+            isfomat: true
+        });
+    </pre>
+        </div>
+        <div class="numWrapRight">
+            <h2>jQuery用法</h2>
+            <div id="box">
+                <div num='232323' class="num1"></div>
+                <div num="938839" class="num1"></div>
+                <div num="124545090" class="num1"></div>
+            </div>
+            <pre><xmp>
+        <div id="box">
+            <div num='232323' class="num1"></div>
+            <div num="938839" class="num1"></div>
+            <div num="124545090" class="num1"></div>
+        </div></xmp>
+        
+        NumUpUI($(".num1"), {
+            prefix: "￥",
+            decimal: 2,
+            isfomat: true
+        });
+    </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="numWrap">
+        <div class="numWrapLeft">
+            <h2>原生用法</h2>
+            <div num='2377777777' id="num"></div>
+            <pre><xmp>
+    <div num='2377777777' id="num"></div></xmp>
+        var num = document.getElementById('num');
+        NumUpUI(num, {
+            duration: 1000,
+            prefix: "￥",
+            decimal: 2,
+            isfomat: false
+        });
+    </pre>
+        </div>
+        <div class="numWrapRight">
+            <h2>jQuery用法</h2>
+            <div num='2377777777' id="num2"></div>
+            <pre><xmp>
+    <div num='2377777777' id="num2"></div></xmp>
+        NumUpUI($("#num2"), {
+            duration: 1000,
+            prefix: "￥",
+            decimal: 2,
+            isfomat: false
+        });
+    </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="numWrap">
+        <div class="numWrapLeft">
+            <div class="numDiv"></div>
+            <pre>
+                <xmp><div class="numDiv"></div>
+                </xmp>NumUpUI($(".numDiv"), {
+    duration: 3000,
+    num: 34034390,
+    prefix: "$",
+    decimal: 2,
+    isfomat: true,
+});
+            </pre>
+        </div>
+        <div class="numWrapRight">
+            
+
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src='./js/jquery-1.11.0.js'></script>
+<script type="text/javascript" src='./js/numUp.js'></script>
+<script type="text/javascript">
+var a = document.getElementById('box');
+var A = a.getElementsByTagName("div");
+NumUpUI(A, {
+    prefix: "￥",
+    decimal: 2,
+    isfomat: true
+});
+NumUpUI($(".num1"), {
+    prefix: "￥",
+    decimal: 2,
+    isfomat: true
+});
+var num = document.getElementById('num');
+NumUpUI(num, {
+    duration: 1000,
+    prefix: "￥",
+    decimal: 2,
+    isfomat: false
+});
+NumUpUI($("#num2"), {
+    duration: 1000,
+    prefix: "￥",
+    decimal: 2,
+    isfomat: false
+});
+NumUpUI($(".numDiv"), {
+    duration: 3000,
+    num: 34034390,
+    prefix: "$",
+    decimal: 2,
+    isfomat: true,
+});
+</script>
+
+</html>
