@@ -10,7 +10,6 @@
 			autoPlay: false, //自动播放时间，默认false不自动播放
 			tabEvent: "click", //tab事件有click,mouseover
 			now: 0, //默认第几个显示
-			animate : false,
 			delay: false //延迟时间,false时不延迟
 		}
 		$.extend(this.options, options);
@@ -53,12 +52,7 @@
 			_this.tabHdCon.removeClass("active");
 			_this.tabHdCon.eq(_this.options.now).addClass("active");
 			_this.tabHdContent.css("display", "none");
-			if(_this.options.animate){
-				_this.tabHdContent.eq(_this.options.now).fadeIn();
-			}else{
-				_this.tabHdContent.eq(_this.options.now).css("display", "block")();
-			}
-			
+			_this.tabHdContent.eq(_this.options.now).css("display", "block");
 		}, this.options.autoPlay);
 	}
 	Tab.prototype.change = function(obj) {
@@ -66,11 +60,7 @@
 		this.options.now = $(obj).index();
 		this.tabHdCon.eq(this.options.now).addClass("active");
 		this.tabHdContent.css("display", "none");
-		if(this.options.animate){
-			this.tabHdContent.eq(this.options.now).fadeIn();
-		}else{
-			this.tabHdContent.eq(this.options.now).css("display", "block");
-		}
+		this.tabHdContent.eq(this.options.now).css("display", "block");
 	}
 
 	var tab = function(wrap, options) {
