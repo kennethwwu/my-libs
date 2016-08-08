@@ -1,5 +1,5 @@
-# 插件
-##numUp数字增长效果
+## 插件
+#numUp数字增长效果
 [在线demo](http://zhouyupeng.github.io/numUp/numUp.html)
 <blockquote>
 <h1><strong>使用方法</strong></h1>
@@ -14,7 +14,7 @@
 ```
 NumUpUI(elm,opt);
 
-#opt配置
+##opt配置
 ```javascript
 {
     num:100000,//可选，如果标签中有num这个值配置中的num将失效
@@ -25,12 +25,12 @@ NumUpUI(elm,opt);
     isUpAuto: true //动画效果
 }
 ```
-##select模拟
+#select模拟
 [在线demo](http://ypzhou.esy.es/demos/select/select.html)
 <blockquote>
 <h1><strong>使用方法</strong></h1>
 </blockquote>
-#opt配置
+##opt配置
 ```javascript
 {
 	selectClass: "mySel",//给selectUI的最外层添加class//默认不添加
@@ -40,7 +40,7 @@ NumUpUI(elm,opt);
 	callBack : function(value){//下拉框点击后的回调事件,value回调函数的返回参数，为当前select选中的值 
 		alert("当前选中值为"+ value);
 }
-				
+```			
 
 				
 <h1><strong>使用方法</strong></h1>
@@ -49,7 +49,7 @@ NumUpUI(elm,opt);
 .在select上添加另外class,selectUI.select($(".selectUI1"),{
 	//这里是参数
 })
-##Tab选项卡
+#Tab选项卡
 [在线demo](http://ypzhou.esy.es/demos/tab/out/tab.html)
 
 <blockquote>
